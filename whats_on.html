@@ -472,16 +472,21 @@ body::before {
          <h1 class="display-3 fw-bold"> Join Me</h1>
          <h2 class="display-6 mb-4">View the up & coming projects!</h2>
          <p class="lead mb-4">Crafting compelling narratives that captivate readers and drive engagement.</p>
-         <a href="#portfolio" class="button">View My Work</a>
-         <a href="#contact" class="button">Hire Me</a>
+         <a href="gallery.html" class="button">View My Work</a>
+         <a href="index.html#contact" class="button">Hire Me</a> 
        </div>
        <div class="col-lg-6">
-         <img src="nicole_portrait.jpg" alt="Writer portrait" class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
+         <img src="nicole_portrait.jpg" alt="Writer portrait of script writer and producer director in bradford " class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
          
        </div>
      </div>
      
  </section>
+
+
+
+
+
 
     <!-- Events Timeline -->
     <section id="events" class="py-5">
@@ -493,7 +498,7 @@ body::before {
             </div>
 
 <div class="text-center">
-  <img src="theatre_mask.png" alt="Writing Journey" class="img-fluid my-4" style="width: 10%;">
+  <img src="theatre_mask.png" alt="Theatre mask comedy tradjedy illustration" class="img-fluid my-4" style="width: 10%;">
 </div>
 
 
@@ -502,13 +507,14 @@ body::before {
                 <div class="col-12">
                     <div class="filter-buttons text-center">
                         <button class="btn btn-outline-primary active" data-filter="all">All Events</button>
-                        <button class="btn btn-outline-primary" data-filter="reading">Readings</button>
+                        <button class="btn btn-outline-primary" data-filter="reading">Performances</button>
                         <button class="btn btn-outline-primary" data-filter="workshop">Workshops</button>
-                        <button class="btn btn-outline-primary" data-filter="signing">Book Signings</button>
+                        <button class="btn btn-outline-primary" data-filter="signing">Seminar</button>
                     </div>
                 </div>
             </div>
-
+            
+            
             <!-- Event Cards -->
             <div class="row g-4 event-container">
                 <!-- Event 1: Theatre Show -->
@@ -628,10 +634,49 @@ body::before {
                 </div>
             </div>
 
-<br>
-<div class="text-center">
-  <img src="ink_pots_illustration.png" alt="Writing Journey" class="img-fluid my-4" style="width: 20%;">
+<br><br>
+<div class="image-divider"></div>
+
+<style>
+.image-divider {
+    background-image: url('ink_pot_illustration.png');
+    background-repeat: repeat-x;
+    background-size: contain; /* Ensures full visibility */
+    height: 100px; /* Adjust as needed */
+    width: 100%;
+}
+</style>
+
+<section id="events" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="display-4">Read All About It!</h2>
+      <div class="divider mx-auto"></div>
+      <p class="lead">Join me at these literary engagements</p>
+    </div>
+    </section>
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/AHTtWztz5lo?si=8RGZb55OyRjdfwsZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* Adjust height as needed */
+  }
+  
+  iframe {
+    border-radius: 15px;
+    /* Soft edges */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Optional shadow */
+  }
+</style>
+
 
             <!-- Newsletter CTA -->
             <div class="row mt-5">
