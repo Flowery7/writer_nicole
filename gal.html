@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's On | Nicole Joseph</title>
+    <title>Writer | Nicole Joseph</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -21,8 +21,7 @@
   
   
   <style> 
-  /* Events Gallery Styling */
-.nav-link {
+ .nav-link {
     color: #222 !important; /* Darker grey for stronger contrast */
     font-weight: 600; /* Bolder text */
     font-size: 1.05rem; /* Slightly larger text */
@@ -31,7 +30,7 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle depth */
     transition: all 0.3s ease-in-out; /* Smooth hover effect */
 }
-     
+
 .navbar.scrolled .nav-link {
     opacity: 0; /* Fully transparent */
     transition: opacity 0.2s ease-in-out; /* Faster fade-out */
@@ -239,95 +238,11 @@ body::before {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+
+
         
-        .divider {
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-            margin: 20px auto;
-        }
-        
-        
-        
-        /* Events Page Styling */
-        .events-hero {
-            min-height: 60vh;
-            background: linear-gradient(135deg, rgba(94, 114, 228, 0.9) 0%, rgba(108, 117, 125, 0.9) 100%),
-                url('');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding-top: 80px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-        
-        .events-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-        
-        .events-hero .container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Event Cards */
-        .event-card {
-            transition: all 0.6s ease;
-            margin-bottom: 30px;
-            opacity: 1; /* Changed from 0 to 1 for initial display */
-            transform: translateY(0); /* Changed from 30px to 0 for initial display */
-        }
-        
-        .event-image {
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            min-height: 200px;
-        }
-        
-        .event-date {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 1.2;
-        }
-        
-        .event-date .day {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .event-date .month {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .event-meta span {
-            display: block;
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-bottom: 5px;
-        }
-        
-       .filter-buttons .btn {
+        /* Updated Filter Buttons to match .button style */
+.filter-buttons .btn {
   position: relative;
   padding: 12px 24px;
   border-radius: 8px;
@@ -408,38 +323,43 @@ body::before {
 .filter-buttons .btn:active {
   transform: scale(0.95);
 }
-       
-       
-        
-        /* Newsletter CTA */
-        .newsletter-cta {
-            background: white;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 30px;
-            margin-top: 40px;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 767.98px) {
-            .event-image {
-                height: 200px;
-            }
-            
-            .hero {
-                padding: 100px 0 60px;
-                text-align: center;
-            }
-            
-            .hero-img {
-                margin-top: 30px;
-                max-width: 250px;
-            }
-        }
 
 
 
+.social-links a {
+    font-size: 28px; /* Slightly larger size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.social-links a:hover {
+    transform: scale(1.2); /* Slight hover effect */
+}
+
+/* Individual Social Media Colors */
+.twitter { color: #1DA1F2; }  /* Twitter (X) Blue */
+.linkedin { color: #0077B5; }  /* LinkedIn Blue */
+.instagram { color: #E1306C; }  /* Instagram Pink */
+.facebook { color: #1877F2; }  /* Facebook Blue */
+.youtube { color: #FF0000; }  /* YouTube Red */
+
+
+
+}
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0 20px;
+  }
+  
+  footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
 
 
 /* Event Gallery Cards */
@@ -559,7 +479,7 @@ body::before {
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Elena Wordsmith</a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -584,28 +504,27 @@ body::before {
 
     
     
-    <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center">
-   <div class="container">
-     <div class="row align-items-center">
-       <!-- From Uiverse.io by SteveBloX -->
-       
-       <div class="col-lg-6 hero-text">
-         <h1 class="display-3 fw-bold"> Join Me</h1>
-         <h2 class="display-6 mb-4">View the up & coming projects!</h2>
-         <p class="lead mb-4">Crafting compelling narratives that captivate readers and drive engagement.</p>
-         <a href="gallery.html" class="button">View My Work</a>
-         <a href="index.html#contact" class="button">Hire Me</a> 
-       </div>
-       <div class="col-lg-6">
-         <img src="nicole_portrait.jpg" alt="Writer portrait of script writer and producer director in bradford " class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
-         
-       </div>
-     </div>
-     
- </section>
+  <section id="home" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- From Uiverse.io by SteveBloX -->
+        
+        <div class="col-lg-6 hero-text">
+          <h1 class="display-3 fw-bold">Join me </h1>
+          <h2 class="display-6 mb-4">Award Winning Writer & Storyteller</h2>
+          <p class="lead mb-4">Crafting compelling narratives that captivate readers and drive engagement.</p>
+          <a href="gallery.html" class="button">View My Work</a>
+          <a href="index.html#contact" class="button">Hire Me</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="nicole_portrait.jpg" alt="Writer Nicole Jones portrait image of producer in Bradford" class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
+          
+        </div>
+      </div>
+      
+  </section>
 
- </section>
+ 
     
 
     <!-- Events Gallery -->
