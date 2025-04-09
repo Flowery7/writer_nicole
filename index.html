@@ -1017,7 +1017,186 @@ She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme
    </div>
  </footer>
     
-    
+    <!-- Cookie Banner HTML -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-container">
+    <p class="cookie-message">
+      We use cookies to enhance your experience. By clicking Accept, you consent to the use of cookies.
+      <a href="privacy.html">Learn more</a>
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="cookie-btn">Accept</button>
+      <button id="reject-cookies" class="cookie-btn reject">Reject</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Consent Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+
+    function isLocalStorageAvailable() {
+      try {
+        const test = "__storage_test__";
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function loadGTM() {
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GOOGLE_TAG';
+      script.async = true;
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag('js', new Date());
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied'
+        });
+
+        gtag('config', 'G-GOOGLE_TAG');
+
+        // Update consent to granted
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      };
+      document.head.appendChild(script);
+    }
+
+    function saveConsent(value) {
+      if (isLocalStorageAvailable()) {
+        localStorage.setItem("cookiesConsent", value);
+      }
+    }
+
+    // Accept
+    acceptBtn.addEventListener("click", () => {
+      saveConsent("accepted");
+      banner.style.display = "none";
+      loadGTM();
+    });
+
+    // Reject
+    rejectBtn.addEventListener("click", () => {
+      saveConsent("rejected");
+      banner.style.display = "none";
+    });
+
+    // Auto-check previous consent
+    const consent = isLocalStorageAvailable() ? localStorage.getItem("cookiesConsent") : null;
+    if (consent === "accepted") {
+      banner.style.display = "none";
+      loadGTM();
+    } else if (consent === "rejected") {
+      banner.style.display = "none";
+    } else {
+      banner.style.display = "block";
+    }
+  });
+</script>
+
+<!-- Cookie Banner Styles -->
+<style>
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+    color: #fff;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    display: none;
+  }
+
+  .cookie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .cookie-message {
+    flex: 1;
+    min-width: 250px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 5px 0;
+  }
+
+  .cookie-message a {
+    color: #4da8ff;
+    text-decoration: underline;
+  }
+
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .cookie-btn {
+    background: #228B22;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    min-height: 36px;
+    transition: background 0.2s;
+  }
+
+  .cookie-btn:hover {
+    background: #1e7a1e;
+  }
+
+  .cookie-btn.reject {
+    background: #ff4d4d;
+  }
+
+  .cookie-btn.reject:hover {
+    background: #cc0000;
+  }
+
+  @media (max-width: 600px) {
+    .cookie-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .cookie-buttons {
+      width: 100%;
+    }
+
+    .cookie-btn {
+      flex: 1;
+    }
+  }
+</style>
+
+<!-- GTM noscript fallback (can stay if you're using GTM via tag manager) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
    
 
     <!-- Bootstrap JS -->
