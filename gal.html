@@ -21,6 +21,8 @@
   
   
   <style> 
+  
+  
  .nav-link {
     color: #222 !important; /* Darker grey for stronger contrast */
     font-weight: 600; /* Bolder text */
@@ -576,232 +578,218 @@ body::before {
     
 
     <!-- Events Gallery -->
-    <section id="events" class="py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-4">Previous Events</h2>
-                <div class="divider mx-auto"></div>
-                <p class="lead">View some of the recent projects</p>
-            </div>
+<!-- Events Gallery -->
+<section id="events" class="py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-light">Previous Events</h2>
+            <div class="divider mx-auto bg-gradient" style="height: 2px; width: 80px; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(108,117,125,0.5) 50%, rgba(0,0,0,0) 100%);"></div>
+            <p class="text-muted mt-3">View some of the recent projects</p>
+        </div>
 
+        <div class="text-center">
+            <img src="theatre_mask.png" alt="Theatre mask comedy tradjedy illustration" class="img-fluid my-4" style="width: 120px; opacity: 0.8;">
+        </div>
 
-<div class="text-center">
-  <img src="theatre_mask.png" alt="Theatre mask comedy tradjedy illustration" class="img-fluid my-4" style="width: 10%;">
-</div>
-
-
-            <!-- Filter Buttons -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="filter-buttons text-center">
-                        <button class="btn btn-outline-primary active" data-filter="all">All Events</button>
-                        <button class="btn btn-outline-primary" data-filter="reading">Project 1</button>
-                        <button class="btn btn-outline-primary" data-filter="workshop">Project 2</button>
-                        <button class="btn btn-outline-primary" data-filter="exhibition">Project 3</button>
-                        <button class="btn btn-outline-primary" data-filter="signing">Project 4</button>
-                    </div>
+        <!-- Filter Buttons -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="filter-buttons text-center">
+                    <button class="button" data-filter="all" style="font-size: 0.8rem; padding: 0.5rem 0.8rem;">All Events</button>
+                    <button class="button" data-filter="workshop" style="font-size: 0.8rem; padding: 0.5rem 0.8rem;">Crips with Chips</button>
+                    <button class="button" data-filter="exhibition" style="font-size: 0.8rem; padding: 0.5rem 0.8rem;">Crips & Chips</button>
+                    <button class="button" data-filter="reading" style="font-size: 0.8rem; padding: 0.5rem 0.8rem;">Twelfth Night</button>
+                    <button class="button" data-filter="signing" style="font-size: 0.8rem; padding: 0.5rem 0.8rem;">Brief Encounters</button>
                 </div>
             </div>
+        </div>
 
-      <!-- Event Gallery -->
-            <div class="row g-4 event-gallery">
-                <!-- Event 1: Theatre Show -->
-                
-
-
-<div class="col-lg-6 event-item reading" data-date="2023-06-15">
-                    <div class="card h-100 border-0 shadow-lg overflow-hidden">
-                        <div class="glide event-gallery-slider">
-                            <div class="glide__track" data-glide-el="track">
-                                <ul class="glide__slides">
-                                    <li class="glide__slide">
-                                        <img src="ProjectC4.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectA1.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectA2.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="336738_First Encounters_ Twelfth Night_ 2022_2022_Web use (2) (1).jpg">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                            <div class="event-date">
-                                <span class="day">Twelfth Night </span>
-                                <span class="month"></span>
-                            </div>
+        <!-- Event Gallery -->
+        <div class="row g-4 event-gallery">
+            <!-- Event 1: Theatre Show -->
+           
+            <!-- Event 2: Writing Workshop -->
+            <div class="col-lg-6 event-item workshop" data-date="2023-07-22">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectB3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
                         </div>
-                        <div class="card-body">
-                            <span class="badge bg-primary mb-2">Theatre</span>
-                            <h3 class="card-title">Royal Shakespeare Company, 2022
-</h3>
-                            <div class="event-meta mb-3">
-                                <span><i class="fas fa-map-marker-alt me-2"></i>Theatre Extravaganza</span>
-                               
-                            </div>
-                            <p class="card-text">Nicole worked as part of a team of Creative Associates employed by the RSC. She supported the large-scale tour of Shakespeare’s Twelfth Night for young audiences to Associate School groups and Theatre Partners across Yorkshire: Bradford Alhambra, York Theatre Royal and Hull Truck Theatre</p>
-                            <div class="event-actions">
-                                <a href="https://www.rsc.org.uk/first-encounters-twelfth-night/" target="_blank" class="button" class="btn btn-outline-primary read-more">About</a>
-                            </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
                         </div>
                     </div>
-                </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Crips & Chips</span>
+                        <h3 class="card-title h5 mb-3">Graeae Theatre & Liverpool Everyman Theatre</h3>
+                        <p class="card-text text-secondary mb-4">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Liverpool Everyman Theatres.<br><br>
 
-
-
-                <!-- Event 2: Writing Workshop -->
-                <div class="col-lg-6 event-item workshop" data-date="2023-07-22">
-                    <div class="card h-100 border-0 shadow-lg overflow-hidden">
-                        <div class="glide event-gallery-slider">
-                            <div class="glide__track" data-glide-el="track">
-                                <ul class="glide__slides">
-                                    <li class="glide__slide">
-                                        <img src="ProjectB3.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectB4.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectC1.png">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectC2.png">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                            <div class="event-date">
-                                <span class="day">Crips with Chips</span>
-                                <span class="month"></span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-success mb-2">Creative Writing</span>
-                            <h3 class="card-title">Graeae Theatre & Liverpool Everyman Theatre</h3>
-                            <div class="event-meta mb-3">
-                                <span><i class="fas fa-map-marker-alt me-2"></i>Tour'</span>
-                                
-                            </div>
-                            <p class="card-text">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Liverpool Everyman Theatres.<br><br>
-
-<strong>Gather Your Party Before Venturing Forth</strong> by Bobby Brill, performed by Nadia Nadarajah, Faye Donnelan and interpreted by Chandu Gopalakrishnan
-
-The play explored long-distance friendships in the gaming world and insecure housing and disabled experience.
-<br><br>
-<strong>JANUS</strong> by Madeleine Farnhill, performed by Nadia Nadarajah, Mark Lockyer and Chandu Gopalakrishnan
-
-A folk-horror exploring rural isolation, brutality and abuse through the appearance of a two-headed lamb.
-</p>
-                            <div class="event-actions">
-                              
-                                <a href="https://graeae.org/project/crips-with-chips/" target="_blank" class="button" class="btn btn-outline-primary read-more">Visit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 3: Exhibition -->
-                <div class="col-lg-6 event-item exhibition" data-date="2023-08-05">
-                    <div class="card h-100 border-0 shadow-lg overflow-hidden">
-                        <div class="glide event-gallery-slider">
-                            <div class="glide__track" data-glide-el="track">
-                                <ul class="glide__slides">
-                                    <li class="glide__slide">
-                                        <img src="ProjectA3.png" class="img-fluid" alt="Exhibition hall">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectA4.png" class="img-fluid" alt="Manuscript display">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectB1.png" class="img-fluid" alt="Book display">
-                                    </li>
-                                    <li class="glide__slide">
-                                        <img src="ProjectB2.png" class="img-fluid" alt="Library interior">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                            <div class="event-date">
-                                <span class="day">Crips & Chips</span>
-                                <span class="month"></span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-warning mb-2">Community </span>
-                            <h3 class="card-title">Graeae Theatre & Theatre by the Lake 2023 </h3>
-                            <div class="event-meta mb-3">
-                                <span><i class="fas fa-map-marker-alt me-2"></i>Community Project</span>
-                                
-                            </div>
-                            <p class="card-text">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Theatre by the Lake. <br><br>
-
-<strong> Let Me Fat in Peace </strong>by Caitlin Magnall-Kearns, performed by Beca Barton and Siobhan Athwal.
-
-This comedy explored fat-phobia and perceived desirability in mixed-weight relationships.<br><br>
-
-<strong>Ajar</strong> by Nell Hardy, performed by Beca Barton, Mariah Loca, Kellan Frankland and Charlie Folorunsho.
-
-The drama explored transphobia in women’s refuges and unsafety in police handling.
-
-</p>
-                            <div class="event-actions">
-                                
-                                <a href="https://www.youtube.com/watch?v=vKiA1QrLbUY" target="_blank" class="button" class="btn btn-outline-primary read-more">Watch</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 4: Book Signing -->
-                <div class="col-lg-6 event-item signing" data-date="2023-10-12">
-                    <div class="card h-100 border-0 shadow-lg overflow-hidden">
-                        <div class="glide event-gallery-slider">
-                            <div class="glide__track" data-glide-el="track">
-                                <ul class="glide__slides">
-                                    <li class="glide__slide">
-                                        <img src="Screenshot 2025-03-26 2.12.49 PM.png" class="img-fluid" alt="Book signing">
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                            <div class="event-date">
-                                <span class="day">Crooked Lane</span>
-                                <span class="month"></span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-danger mb-2">Coming Soon!</span>
-                            <h3 class="card-title">Date to be confirmed!</h3>
-                            <div class="event-meta mb-3">
-                                <span><i class="fas fa-map-marker-alt me-2"></i>Contact for more info</span>
-                                
-                            </div>
-                            <p class="card-text">Work in development- Nicole's micro-commission- Crooked Lane, an extract of an modern theatre adaptation of Bronte Classic The Tenant of Wildfell Hall is being workshopped with Rise and Howl productions and Ilkley Playhouse, commissioned by Bronte Society.</p>
-                            <div class="event-actions">
-                                <a href="https://www.instagram.com/p/DHvwfOetv7I/?igsh=MTZ6aDBqMWw4MHhmNg==
- " target="_blank" class="button" class="btn btn-outline-primary read-more">More</a>
-                               
-                            </div>
+                        <strong>Gather Your Party Before Venturing Forth</strong> by Bobby Brill, performed by Nadia Nadarajah, Faye Donnelan and interpreted by Chandu Gopalakrishnan. The play explored long-distance friendships in the gaming world and insecure housing and disabled experience.
+                        <br><br>
+                        <strong>JANUS</strong> by Madeleine Farnhill, performed by Nadia Nadarajah, Mark Lockyer and Chandu Gopalakrishnan. A folk-horror exploring rural isolation, brutality and abuse through the appearance of a two-headed lamb.</p>
+                        <div class="event-actions">
+                            <a href="https://graeae.org/project/crips-with-chips/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">Visit</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Event 3: Exhibition -->
+            <div class="col-lg-6 event-item exhibition" data-date="2023-08-05">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectA3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Exhibition hall">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Manuscript display">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Book display">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Library interior">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Graeae Theatre</span>
+                        <h3 class="card-title h5 mb-3">Graeae Theatre & Theatre by the Lake 2023</h3>
+                        <p class="card-text text-secondary mb-4">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Theatre by the Lake. <br><br>
+
+                        <strong> Let Me Fat in Peace </strong>by Caitlin Magnall-Kearns, performed by Beca Barton and Siobhan Athwal. This comedy explored fat-phobia and perceived desirability in mixed-weight relationships.<br><br>
+
+                        <strong>Ajar</strong> by Nell Hardy, performed by Beca Barton, Mariah Loca, Kellan Frankland and Charlie Folorunsho. The drama explored transphobia in women's refuges and unsafety in police handling.</p>
+                        <div class="event-actions">
+                            <a href="https://www.youtube.com/watch?v=vKiA1QrLbUY" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 event-item reading" data-date="2023-06-15">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectC4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="336738_First Encounters_ Twelfth Night_ 2022_2022_Web use (2) (1).jpg" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Twelfth Night</span>
+                        <h3 class="card-title h5 mb-3">Royal Shakespeare Company, 2022</h3>
+                        <p class="card-text text-secondary mb-4">Nicole worked as part of a team of Creative Associates employed by the RSC. She supported the large-scale tour of Shakespeare's Twelfth Night for young audiences to Associate School groups and Theatre Partners across Yorkshire: Bradford Alhambra, York Theatre Royal and Hull Truck Theatre</p>
+                        <div class="event-actions">
+                            <a href="https://www.rsc.org.uk/first-encounters-twelfth-night/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4: Book Signing -->
+            <div class="col-lg-6 event-item signing" data-date="2023-10-12">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="Brief_encounter.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Book signing">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Brief Encounters</span>
+                        <h3 class="card-title h5 mb-3">Date to be confirmed!</h3>
+                        <p class="card-text text-secondary mb-4">Work in development- Nicole's micro-commission- Crooked Lane, an extract of an modern theatre adaptation of Bronte Classic The Tenant of Wildfell Hall is being workshopped with Rise and Howl productions and Ilkley Playhouse, commissioned by Bronte Society.</p>
+                        <div class="event-actions">
+                            <a href="https://www.instagram.com/p/DHvwfOetv7I/?igsh=MTZ6aDBqMWw4MHhmNg==" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      
+  
+
 
 
 
