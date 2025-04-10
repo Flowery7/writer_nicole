@@ -1210,15 +1210,58 @@ She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    // Navbar scroll functionality
     let navbar = document.getElementById("navbar");
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) { // Adjust scroll threshold as needed
+        // Lock horizontal scrolling first
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+        
+        // Then handle navbar scroll effect
+        if (window.scrollY > 50) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
         }
     });
+
+    // Additional horizontal scroll prevention
+    function preventHorizontalScroll(e) {
+        // Prevent horizontal wheel/trackpad scrolling
+        if (e.deltaX !== 0) {
+            e.preventDefault();
+        }
+    }
+
+    // Touch events for mobile devices
+    function preventTouchHorizontalScroll(e) {
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            this.touchStartX = touch.clientX;
+        }
+    }
+
+    function handleTouchMove(e) {
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            const diffX = touch.clientX - this.touchStartX;
+            if (Math.abs(diffX) > 5) {
+                e.preventDefault();
+            }
+        }
+    }
+
+    // Event listeners
+    window.addEventListener('wheel', preventHorizontalScroll, { passive: false });
+    window.addEventListener('touchstart', preventTouchHorizontalScroll, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    // Initial check to ensure no horizontal scroll
+    if (window.scrollX !== 0) {
+        window.scrollTo(0, window.scrollY);
+    }
 });
 </script>
 
