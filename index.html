@@ -1222,6 +1222,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to prevent horizontal scrolling
+    function preventHorizontalScroll() {
+        // Check if we're scrolling horizontally
+        if (window.scrollX !== 0) {
+            // Immediately snap back to 0 horizontal scroll
+            window.scrollTo(0, window.scrollY);
+        }
+    }
+
+    // Set up event listeners
+    window.addEventListener('scroll', preventHorizontalScroll);
+    window.addEventListener('wheel', function(e) {
+        // Prevent horizontal wheel scrolling
+        if (e.deltaX !== 0) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Also check on resize in case layout changes
+    window.addEventListener('resize', preventHorizontalScroll);
+
+    // Initial check
+    preventHorizontalScroll();
+});
+</script>
 
 </html>
 
