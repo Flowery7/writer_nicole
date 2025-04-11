@@ -1205,57 +1205,57 @@ She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme
     <script src="script.js"></script>
     
     
-    <script>
-   document.addEventListener('DOMContentLoaded', function() {
-     // ... (your existing scroll and filter code remains the same) ...
-     
-     // Form submission handler
-     const contactForm = document.getElementById('contactForm');
-     
-     contactForm.addEventListener('submit', async function(e) {
-       e.preventDefault();
-       
-       // Get form values
-       const name = document.getElementById('name').value;
-       const email = document.getElementById('email').value;
-       const phone = document.getElementById('Phone').value;
-       const message = document.getElementById('message').value;
-       
-       // Create payload object matching your DynamoDB structure
-       const payload = {
-         submissions: "contact_form", // or whatever string identifier you want
-         email: email,
-         message: message,
-         name: name,
-         phone: phone,
-         timestamp: new Date().toISOString() // generates current timestamp
-       };
-       
-       try {
-         // Replace with your actual API invoke URL
-         const API_URL = "https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions";
-         
-         const response = await fetch(API_URL, {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json',
-           },
-           body: JSON.stringify(payload)
-         });
-         
-         if (response.ok) {
-           alert('Message sent successfully!');
-           contactForm.reset();
-         } else {
-           throw new Error('Failed to send message');
-         }
-       } catch (error) {
-         console.error('Error:', error);
-         alert('There was an error sending your message. Please try again.');
-       }
-     });
-   });
- </script>
+   <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ... (your existing scroll and filter code remains the same) ...
+    
+    // Form submission handler
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('Phone').value || '00000000000'; // Default if empty
+      const message = document.getElementById('message').value;
+      
+      // Create payload object matching your DynamoDB structure
+      const payload = {
+        submissions: "contact_form",
+        email: email,
+        message: message,
+        name: name,
+        phone: phone, // This will now always have a value
+        timestamp: new Date().toISOString()
+      };
+      
+      try {
+        // Replace with your actual API invoke URL
+        const API_URL = "https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions";
+        
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload)
+        });
+        
+        if (response.ok) {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
+      }
+    });
+  });
+</script>
 
      <script>
         document.addEventListener('DOMContentLoaded', function() {
