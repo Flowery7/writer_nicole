@@ -881,7 +881,105 @@ body::before {
 </footer>
     
    
-   
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const emailForm = document.getElementById('emailSubmissionForm'); // Changed form ID
+  
+  if (emailForm) {
+    emailForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      
+      try {
+        // UI feedback while processing
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Get email value and auto-populate other fields
+        const userEmail = this.elements.email.value.trim();
+        
+        // Auto-populated data structure
+        const formData = {
+          name: "Email Submission", // Static value
+          email: userEmail,         // User input
+          phone: "00000000000",     // Static value
+          message: "New email submission" // Static value
+        };
+        
+        // Validation (email only)
+        if (!userEmail) throw new Error('Please enter your email');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
+          throw new Error('Please enter a valid email address');
+        }
+        
+        // Same Lambda endpoint
+        const LAMBDA_ENDPOINT = 'https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions';
+        
+        const response = await fetch(LAMBDA_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.message || 'Server error. Please try again later.');
+        }
+        
+        // Success handling
+        showAlert('Thank you for subscribing!', 'success'); // Modified message
+        this.reset();
+        
+      } catch (error) {
+        console.error('Submission error:', error);
+        showAlert(error.message || 'Failed to send. Please try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    });
+  }
+  
+  // Alert function (same as original)
+  function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `form-alert alert alert-${type === 'error' ? 'danger' : 'success'}`;
+    alertDiv.textContent = message;
+    
+    // Styling (matches original)
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '1000';
+    alertDiv.style.padding = '15px';
+    alertDiv.style.borderRadius = '5px';
+    alertDiv.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    alertDiv.style.animation = 'fadeIn 0.3s ease-in-out';
+    
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+      alertDiv.style.animation = 'fadeOut 0.3s ease-in-out';
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 5000);
+  }
+});
+
+// Add the same animation CSS as original
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(style);
+</script>
    
 
     <!-- Bootstrap JS -->
