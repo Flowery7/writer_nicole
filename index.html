@@ -1241,7 +1241,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!formData.message) throw new Error('Please enter your message');
         
         // Your Lambda endpoint
-        const LAMBDA_ENDPOINT = 'https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev';
+        const LAMBDA_ENDPOINT = 'https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions';
         
         const response = await fetch(LAMBDA_ENDPOINT, {
           method: 'POST',
