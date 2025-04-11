@@ -934,76 +934,78 @@ She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme
    
    
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-4">Get In Touch</h2>
-                <div class="divider mx-auto"></div>
-                <p class="lead">Let's collaborate on your next writing project</p>
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="display-4">I'll look forward to working with you.</h2>
+      <div class="divider mx-auto"></div>
+      <p class="lead">Let's collaborate on your next writing project!</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <form id="contactForm" class="contact-form">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="subject" placeholder="Phone">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+           <p style="font-size: 0.8em;"> By submitting you agree to the privacy policy & being contacted. You can unsubscribe at any time</p>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-info">
+          <h4 class="mb-4">Contact Information</h4>
+          <div class="info-item d-flex mb-4">
+            <div class="icon me-3">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <form id="contactForm" class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="phone" placeholder="Phone">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                       <p style="font-size: 0.8em;"> By submitting you agree to the privacy policy & being contacted. You can unsubscribe at any time</p>
-                        <button type="submit" class="button">Send Message</button>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <h4 class="mb-4">Contact Information</h4>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h5>Location</h5>
-                                <p>West Yorkshire</p>
-                            </div>
-                        </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h5>Email</h5>
-                                <p>nicole@storiesbynicole.co.uk</p>
-                            </div>
-                        </div>
-                        <div class="info-item d-flex mb-4">
-                            <div class="icon me-3">
-                               
-                            </div>
-                            <div>
-                                
-                            </div>
-                        </div>
-            <div class="social-links mt-5">
-   
-<a href="https://bsky.app/profile/storiesbynicole.bsky.social/" class="me-3 bluesky">
+            <div>
+              <h5>Location</h5>
+              <p>West Yorkshire</p>
+            </div>
+          </div>
+          <div class="info-item d-flex mb-4">
+            <div class="icon me-3">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <p>nicole@storiesbynicole.co.uk</p>
+            </div>
+          </div>
+          <div class="info-item d-flex mb-4">
+            <div class="icon me-3">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              
+            </div>
+          </div>
+          <div class="social-links mt-5">
+           <a href="https://bsky.app/profile/storiesbynicole.bsky.social/" class="me-3 bluesky">
   <i class="fas fa-cloud"></i> <!-- Placeholder icon -->
 </a>
     <a href="https://www.linkedin.com/in/nicole-joseph-07553714b/" class="me-3 linkedin"><i class="fab fa-linkedin"></i></a>
     <a href="https://www.instagram.com/_storiesbynicole" class="me-3 instagram"><i class="fab fa-instagram"></i></a>
-    
-    
-</div>
-                </div>
-            </div>
+          </div>
+          
+          
         </div>
-    </section>
+      </div>
+    </div>
+</section>
 
+
+
+  
     <!-- Footer -->
      <footer class="py-4 bg-dark text-white">
    <div class="container">
@@ -1209,7 +1211,7 @@ She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme
     <script src="script.js"></script>
     
     
-    <script>
+     <script>
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contactForm');
   
@@ -1224,11 +1226,11 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         
-        // Get form values
+        // Get form values - NOTE: Changed 'phone' to 'subject' to match your form
         const formData = {
           name: this.elements.name.value.trim(),
           email: this.elements.email.value.trim(),
-          phone: this.elements.phone.value.trim() || 'Not provided', // Default if empty
+          phone: this.elements.subject.value.trim() || 'Not provided', // Using subject field
           message: this.elements.message.value.trim()
         };
         
@@ -1268,14 +1270,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Alert function (same as before)
+  // Implement the missing alert function
   function showAlert(message, type) {
-    /* ... existing alert implementation ... */
+    // Remove existing alerts first
+    const existingAlert = document.querySelector('.form-alert');
+    if (existingAlert) existingAlert.remove();
+    
+    // Create alert element
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `form-alert alert alert-${type === 'error' ? 'danger' : 'success'}`;
+    alertDiv.textContent = message;
+    
+    // Style the alert (matches your design)
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '1000';
+    alertDiv.style.padding = '15px';
+    alertDiv.style.borderRadius = '5px';
+    alertDiv.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    alertDiv.style.animation = 'fadeIn 0.3s ease-in-out';
+    
+    // Add to DOM
+    document.body.appendChild(alertDiv);
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      alertDiv.style.animation = 'fadeOut 0.3s ease-in-out';
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 5000);
   }
 });
 
+// Add animation styles
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(style);
 </script>
-
 
 <script>
         document.addEventListener('DOMContentLoaded', function() {
