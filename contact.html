@@ -14,8 +14,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        
-      .nav-link {
+     .nav-link {
     color: #222 !important; /* Darker grey for stronger contrast */
     font-weight: 600; /* Bolder text */
     font-size: 1.05rem; /* Slightly larger text */
@@ -24,7 +23,7 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle depth */
     transition: all 0.3s ease-in-out; /* Smooth hover effect */
 }
-     
+
 .navbar.scrolled .nav-link {
     opacity: 0; /* Fully transparent */
     transition: opacity 0.2s ease-in-out; /* Faster fade-out */
@@ -232,95 +231,11 @@ body::before {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+
+
         
-        .divider {
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-            margin: 20px auto;
-        }
-        
-        
-        
-        /* Events Page Styling */
-        .events-hero {
-            min-height: 60vh;
-            background: linear-gradient(135deg, rgba(94, 114, 228, 0.9) 0%, rgba(108, 117, 125, 0.9) 100%),
-                url('');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding-top: 80px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-        
-        .events-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-        
-        .events-hero .container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Event Cards */
-        .event-card {
-            transition: all 0.6s ease;
-            margin-bottom: 30px;
-            opacity: 1; /* Changed from 0 to 1 for initial display */
-            transform: translateY(0); /* Changed from 30px to 0 for initial display */
-        }
-        
-        .event-image {
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            min-height: 200px;
-        }
-        
-        .event-date {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-align: center;
-            line-height: 1.2;
-        }
-        
-        .event-date .day {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .event-date .month {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .event-meta span {
-            display: block;
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-bottom: 5px;
-        }
-        
-       .filter-buttons .btn {
+        /* Updated Filter Buttons to match .button style */
+.filter-buttons .btn {
   position: relative;
   padding: 12px 24px;
   border-radius: 8px;
@@ -401,37 +316,10 @@ body::before {
 .filter-buttons .btn:active {
   transform: scale(0.95);
 }
-       
-       
-        
-        /* Newsletter CTA */
-        .newsletter-cta {
-            background: white;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 30px;
-            margin-top: 40px;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 767.98px) {
-            .event-image {
-                height: 200px;
-            }
-            
-            .hero {
-                padding: 100px 0 60px;
-                text-align: center;
-            }
-            
-            .hero-img {
-                margin-top: 30px;
-                max-width: 250px;
-            }
-        }
-        
-        
-        .social-links a {
+
+
+
+.social-links a {
     font-size: 28px; /* Slightly larger size */
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -448,7 +336,133 @@ body::before {
 .youtube { color: #FF0000; }  /* YouTube Red */
 
 
-        
+
+}
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0 20px;
+  }
+  
+  footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+
+
+/* Event Gallery Cards */
+.event-gallery .card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.event-gallery .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.event-gallery-slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.glide__slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.glide__arrow {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.glide__arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.event-date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-meta span {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+/* Filter Buttons */
+.filter-buttons .btn {
+  margin: 0 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .event-gallery-slider {
+    height: 250px;
+  }
+  
+  .glide__slide img {
+    height: 250px;
+  }
         
     </style>
 </head>
@@ -503,7 +517,7 @@ body::before {
 
 
 <div class="text-center">
-  <img src="theatre_mask.png" alt="Writing Journey" class="img-fluid my-4" style="width: 10%;">
+  <img src="theatre_mask.png" alt="Writing Journey" class="img-fluid my-4" style="width: 20%;">
 </div>
 
 
@@ -576,7 +590,7 @@ body::before {
 
 <br>
 <div class="text-center">
-  <img src="ink_pots_illustration.png" alt="Writing Journey" class="img-fluid my-4" style="width: 20%;">
+  <img src="ink_pots_illustration.png" alt="Writing Journey" class="img-fluid my-4" style="width: 40%;">
 </div>
 
          
