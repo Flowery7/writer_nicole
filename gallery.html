@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JW9RYY2Y7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JW9RYY2Y7P');
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing | Nicole Joseph</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+    
+    
+   .nav-link {
+    color: #222 !important; /* Darker grey for stronger contrast */
+    font-weight: 600; /* Bolder text */
+    font-size: 1.05rem; /* Slightly larger text */
+    letter-spacing: 0.05em; /* More spacing for readability */
+    text-transform: uppercase; /* Makes it stand out */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.navbar.scrolled .nav-link {
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out; /* Faster fade-out */
+}
+
+@media (max-width: 991.98px) {
+    #navbar {
+        padding: 0;
+        background-color: transparent !important;
+        position: absolute;
+        width: 100%;
+    }
+
+    /* Floating burger menu */
+    .navbar-toggler {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: transparent;
+        border: 1px solid #5c8a64;
+        border-radius: 4px;
+        padding: 0.375rem 0.5rem;
+        transition: all 0.2s ease;
+        z-index: 1000;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .navbar-toggler:hover {
+        background-color: rgba(92, 138, 100, 0.08);
+    }
+
+    /* Full-width dropdown */
+    .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%; /* Extend to full width */
+        background-color: #fdfcf7;
+        border-top: 1px solid rgba(92, 138, 100, 0.15);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        padding: 0.75rem 0;
+        max-height: 70vh;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .nav-item {
+        margin: 0;
+        text-align: center; /* Center align menu items */
+    }
+
+    .nav-link {
+        color: #333;
+        padding: 1rem;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        transition: all 0.2s ease;
+        display: block;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(92, 138, 100, 0.08);
+        color: #2d4a30 !important;
+    }
+    /* Apply a class for the faded effect */
+
+
+}
+
+
+
+body {
+  background-color: #fdfcf7;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll from rotated elements */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    url("background_feather.png");
+  
+  background-repeat: repeat;
+  background-size: 300px;
+  background-position: 
+    0 0,
+    900px 450px,
+    1800px 900px;
+  opacity: 0.3;
+  transform: rotate(330deg); /* Adjust the degree as needed (e.g., 5deg-15deg) */
+  transform-origin: center center;
+  z-index: -1;
+  pointer-events: none; /* Ensures clicks pass through to content */
+}
+
+
+
+.hero-img {
+  margin-top: 50px;
+  padding-left: 70px;
+  /* Adjust as needed */
+}
+
+.button {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4CAF50;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #4CAF50 20%, transparent 30%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greenTopBubbles 0.6s ease;
+}
+
+@keyframes greenTopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenBottomBubbles 0.6s ease;
+}
+
+@keyframes greenBottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+        
+        /* Updated Filter Buttons to match .button style */
+.filter-buttons .btn {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4CAF50;
+  transition: all 0.2s ease;
+  margin: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.filter-buttons .btn-outline-primary {
+  background-color: transparent;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+.filter-buttons .btn.active {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+}
+
+.filter-buttons .btn:before,
+.filter-buttons .btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+.filter-buttons .btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #4CAF50 20%, transparent 30%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greenTopBubbles 0.6s ease;
+}
+
+.filter-buttons .btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenBottomBubbles 0.6s ease;
+}
+
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  background-color: #4CAF50;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+  border: none;
+}
+
+.filter-buttons .btn:active {
+  transform: scale(0.95);
+}
+
+
+
+.social-links a {
+    font-size: 28px; /* Slightly larger size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Slight hover effect */
+}
+
+/* Individual Social Media Colors */
+.twitter { color: #1DA1F2; }  /* Twitter (X) Blue */
+.linkedin { color: #0077B5; }  /* LinkedIn Blue */
+.instagram { color: #E1306C; }  /* Instagram Pink */
+.facebook { color: #1877F2; }  /* Facebook Blue */
+.youtube { color: #FF0000; }  /* YouTube Red */
+
+
+
+}
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0 20px;
+  }
+  
+  footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+
+
+/* Event Gallery Cards */
+.event-gallery .card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.event-gallery .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.event-gallery-slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.glide__slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.glide__arrow {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.glide__arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.event-date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-meta span {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+/* Filter Buttons */
+.filter-buttons .btn {
+  margin: 0 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .event-gallery-slider {
+    height: 250px;
+  }
+  
+  .glide__slide img {
+    height: 250px;
+  }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  
+     <li class="nav-item">
+       <a class="nav-link active" href="index.html">Home</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="gallery.html">Writing</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" href="gal.html">Theatre Making</a>
+     </li>
+     <li class="nav-item">
+  <a class="nav-link" href="contact.html">Contact</a>
+</li>
+     </li>
+   </ul>
+ </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+   <section id="home" class="hero d-flex align-items-center">
+   <div class="container">
+     <div class="row align-items-center">
+       <!-- From Uiverse.io by SteveBloX -->
+       
+       <div class="col-lg-6 hero-text">
+         <h1 class="display-3 fw-bold">Gallery Of Work</h1>
+         <h2 class="display-6 mb-4">A selection of recent projects</h2>
+         <p class="lead mb-4">Freelance writer specialising in scriptwriting for theatre and screen, theatre director and dramaturg.</p>
+         <a href="gallery.html" class="button">View my Work</a>
+         <a href="index.html#contact" class="button">Hire Me</a>
+       </div>
+       <div class="col-lg-6">
+         <img src="nicole_portrait.jpg" alt="Writer portrait - Nicole Joseph" class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
+         
+       </div>
+     </div>
+     
+ </section>
+
+
+
+    <!-- Gallery Section -->
+<section id="gallery" class="py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4 text-start">My Work</h2>
+            <div class="divider mx-auto"></div>
+            
+            
+            
+            <p class="fs-5 text-start lead">A selction of recent and ongoing projects.<br> Find out more below or contact me directly to learn how I could bring my expertise to your project.</p>
+
+        </div>
+        <div class="text-center">
+            <img src="ink_pots_illustration.png" alt="Writing scripts , plays Journey" class="img-fluid my-4" style="width: 36%;">
+        </div>
+        <br><br>
+
+        <!-- Single row for all gallery items -->
+        <div class="row gallery-container">
+            
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="podcast_in_and_out_of_the_money.jpeg" alt=" Podcast - In and Out of the money." class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"> Fair Play Campaign Artist Commision </h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>(2025-2026)</span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Nicole was a commissioned writer for RTYDS’s Class Assembly event as part of their Fair Play initiative for working class artists in theatre. She performed her commissioned poem- an artistic provocation about working class artist experience in Bradford, to the sector and local artists. The anecdotal poem ‘In and out the money’ was recorded in 2026 for their audio legacy version of the project.</p>
+                        <a href="https://shows.acast.com/69caa21816bd65d0692df368/episodes/69cad63903f0e15830062925" target="_blank" class="button">Listen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="bbc-writers-voices.jpg" alt=" BBC Writers - Theatre writer , playwright" class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Voices 2025 - North & Midlands</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>(2025-2026)</span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Work in development- Nicole's micro-commission- Selected as a finalist for the Kay Mellor Fellowship, Nicole went on to be identified for the North and Midlands cohort of BBC Voices 2025. Through the programme, she developed an original TV pilot and series outline with a BBC Development Producer, while building relationships with independent production companies. She has since completed two drafts of the screenplay developed during the programme.</p>
+                        <a href="https://www.bbc.co.uk/writers/blog/voices-2025-north-and-midlands?fbclid=PAQ0xDSwLTmSRleHRuA2FlbQIxMQABp3swPit7Ipi_cD6GWAQsMp-zAICCTsBHsR0x1rv3w9gN2IdDB4WPAthq6QB__aem_a4PFmL7OC5vPskhO__FsTQ " target="_blank" class="button">More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="R&D_drama.png" alt="Crooked Lane - Theatre writer , playwright" class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Crooked Lane</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>(2025-2026)</span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Work in development- Nicole's micro-commission- Crooked Lane, an extract of an modern theatre adaptation of Bronte Classic The Tenant of Wildfell Hall is being workshopped with Rise and Howl productions and Ilkley Playhouse, commissioned by Bronte Society.</p>
+                        <a href="https://www.instagram.com/p/DHvwfOetv7I/" target="_blank" class="button">Visit</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="bronte_festival_of_womens_theatre.png" alt="Writing festival, bronte, womens theatre" class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Bronte Commisioned Residency</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>(2024-2025)</span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Nicole has worked with the Bronte Society Parsonage Museum to develop a series of work based on her experience as a local writer, around the ideas of home, childhood and women's experiences.
+
+She has researched from their rare archives, delivered workshops at the Bronte Festival of Women's Writing on developing children's work ideas and sustaining writing practice, appeared on their podcast ‘Behind the Glass’ sharing a poem inspired by Anne Bronte and is developing an extract of a modern theatre adaptation of Anne’s lesser known but bitingly brilliant The Tenant of Wildfell Hall. Nicole is collaborating with Ilkley Playhouse to workshop and showcase the extract.</p>
+                        <a href="https://www.instagram.com/bronteparsonagemuseum" target="_blank" class="button">Visit</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="Lottery_fund.png" alt="Arts Council funding award Nicole Joseph " class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Arts Council England Developing Your Creative Practice Grant Award</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i> (2023 - Present) </span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Nicole was awarded an Arts Council England Developing Your Creative Practice grant to progress her practice as a playwright to the next level, supported by the Royal Exchange Theatre Manchester. She was mentored by a leading Dramaturg, an experienced award-winning writer mentor and dramaturg, explored international and fringe theatre and wrote a new ambitious large-cast and scale play, which was workshopped with support of Sheffield Theatres with their Young Company and local actors, directed by a prominent theatre director.
+
+With additional support from Leeds 2023 Expanding Horizons programme, Nicole was able to visit New York, exploring work of scale and received mentoring from Chief Executive Producer of The Shed theatre.</p>
+                        <a href="https://www.artscouncil.org.uk/" target="_blank" class="button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item fiction animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="Urgent!_play1.png" alt="Urgent play, theatre, nicole jospeh " class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Urgent!</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>A Timely Play (2024)</span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">University drop-out and house-sharer Jude drifts through life until one day when he accidentally opens a time portal and finds out death is coming for him. A story about friendship, grief and time.
+
+Nicole collaborated with Sheffield Theatres Young Company, responding to their wide ranging ambitions to create this fantasy comedy-drama with exciting psychedelic music and design.</p>
+                        <a href="https://www.youtube.com/watch?v=eTWgLCDhunY" target="_blank" class="button">View</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item journalism animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="dancing_actors.jpg" alt="My big cousin play, dancer's , singing , play nicole joseph" class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">My Big Cousin</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>Sheffield Theatres (2023) </span>
+                            <span class="publisher"><i class="far fa-newspaper me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">My Big Cousin written by Nicole Joseph. Directed by Deborah Pakkar-Hull. Performed by Eve Midgely and Rachel Morris. Composer: Tommi Bryson, Musical Director: Tom Crathorne, Puppetry: Kathleen Yore.
+
+Nicole’s new play My Big Cousin, received a two-day development period while Nicole was on attachment as a Bank Cohort Writer at Sheffield Theatres.
+
+My Big Cousin explores the relationship between two cousins with a generational gap who try to find common ground while going on a special adventure which doesn’t quite go to plan. For ages 5+, with music and puppetry.</p>
+                        <a href="https://www.sheffieldtheatres.co.uk/news/sheffield-theatres-announce-new-supported-artists-of-the-bank-cohort-2022" target="_blank" class="button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item business animate-gallery">
+                <div class="card h-100 gallery-card">
+                    <div class="card-img-top">
+                        <img src="two_women_tie.jpg" alt="two_female_actresses" class="img-fluid">
+                        <div class="card-category"></div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Come Through Festival</h3>
+                        <div class="card-meta mb-3">
+                            <span class="date"><i class="far fa-calendar me-2"></i>Tamasha Theatre x Birmingham Hippodrome (2022)</span>
+                            <span class="publisher"><i class="fas fa-building me-2"></i>About</span>
+                        </div>
+                        <p class="card-text">Butterfly written by Nicole Joseph. Directed by Amelia Thornber. Performed by Issy Adedeji and Jemma Angell. Dramaturgy: Iman Qureshi and Satinder Chohan.
+
+An extract of Nicole’s new play Butterfly, written on attachment as a Tamasha Playwright, was produced for the Come Through Festival at Tamasha’s venue Theatro Technis in London and Birmingham Hippodrome.</p>
+                        <a href="https://tamasha.org.uk/projects/come-through/" target="_blank" class="button">View</a>
+                    </div>
+                </div>
+            </div>
+
+        
+
+              
+            
+        </div>
+    </section>
+    <div class="text-center">
+    <img src="book_pen_illustration.png" alt="Writing Journey" class="img-fluid my-4" style="width: 28%;">
+    </div>
+    
+    
+    
+    
+<section>
+  <div class="row mt-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="newsletter-cta p-4 p-md-5 text-center rounded shadow">
+        <h3 class="mb-3">Stay Updated</h3>
+        <p class="mb-4">Subscribe to get announcements for new events and appearances</p>
+
+      
+        <form id="emailSubmissionForm" class="row g-2 justify-content-center">
+          <div class="col-md-8">
+            
+            <input type="email" name="email" class="form-control" placeholder="Your email address" required>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 0.8em;">
+              By subscribing you agree to the privacy policy. You can unsubscribe at any time
+            </p>
+            <button type="submit" class="btn w-100" style="background-color: #4CAF50; border-color: #4CAF50; color: white;">
+              Subscribe
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br><br>
+
+
+    <!-- Footer -->
+     <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2025 Nicole Joseph. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="privacy.html" class="text-white me-3">Privacy Policy</a>
+          <a href="privacy.html" class="text-white">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const emailForm = document.getElementById('emailSubmissionForm'); // Changed form ID
+  
+  if (emailForm) {
+    emailForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      
+      try {
+        // UI feedback while processing
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Get email value and auto-populate other fields
+        const userEmail = this.elements.email.value.trim();
+        
+        // Auto-populated data structure
+        const formData = {
+          name: "Email Submission", // Static value
+          email: userEmail,         // User input
+          phone: "00000000000",     // Static value
+          message: "New email submission" // Static value
+        };
+        
+        // Validation (email only)
+        if (!userEmail) throw new Error('Please enter your email');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
+          throw new Error('Please enter a valid email address');
+        }
+        
+        // Same Lambda endpoint
+        const LAMBDA_ENDPOINT = 'https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions';
+        
+        const response = await fetch(LAMBDA_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.message || 'Server error. Please try again later.');
+        }
+        
+        // Success handling
+        showAlert('Thank you for subscribing!', 'success'); // Modified message
+        this.reset();
+        
+      } catch (error) {
+        console.error('Submission error:', error);
+        showAlert(error.message || 'Failed to send. Please try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    });
+  }
+  
+  // Alert function (same as original)
+  function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `form-alert alert alert-${type === 'error' ? 'danger' : 'success'}`;
+    alertDiv.textContent = message;
+    
+    // Styling (matches original)
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '1000';
+    alertDiv.style.padding = '15px';
+    alertDiv.style.borderRadius = '5px';
+    alertDiv.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    alertDiv.style.animation = 'fadeIn 0.3s ease-in-out';
+    
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+      alertDiv.style.animation = 'fadeOut 0.3s ease-in-out';
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 5000);
+  }
+});
+
+// Add the same animation CSS as original
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.getElementById('navbar').classList.add('scrolled');
+                } else {
+                    document.getElementById('navbar').classList.remove('scrolled');
+                }
+                
+                // Back to top button
+                if (window.scrollY > 300) {
+                    document.querySelector('.back-to-top').classList.add('active');
+                } else {
+                    document.querySelector('.back-to-top').classList.remove('active');
+                }
+            });
+            
+            // Initialize filter functionality
+            const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Animate cards on scroll
+            const galleryCards = document.querySelectorAll('.gallery-card');
+            
+            function animateGalleryCards() {
+                galleryCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (cardPosition < windowHeight - 100) {
+                        card.classList.add('show');
+                    }
+                });
+            }
+            
+            // Initial check
+            animateGalleryCards();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateGalleryCards);
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Back to top button functionality
+            document.querySelector('.back-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

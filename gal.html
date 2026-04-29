@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JW9RYY2Y7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JW9RYY2Y7P');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theatre Making | Nicole Joseph</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Glide.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Events CSS -->
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  
+  
+  <style> 
+  
+  
+ .nav-link {
+    color: #222 !important; /* Darker grey for stronger contrast */
+    font-weight: 600; /* Bolder text */
+    font-size: 1.05rem; /* Slightly larger text */
+    letter-spacing: 0.05em; /* More spacing for readability */
+    text-transform: uppercase; /* Makes it stand out */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.navbar.scrolled .nav-link {
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out; /* Faster fade-out */
+}
+
+@media (max-width: 991.98px) {
+    #navbar {
+        padding: 0;
+        background-color: transparent !important;
+        position: absolute;
+        width: 100%;
+    }
+
+    /* Floating burger menu */
+    .navbar-toggler {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: transparent;
+        border: 1px solid #5c8a64;
+        border-radius: 4px;
+        padding: 0.375rem 0.5rem;
+        transition: all 0.2s ease;
+        z-index: 1000;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.15em;
+        height: 1.15em;
+    }
+
+    .navbar-toggler:hover {
+        background-color: rgba(92, 138, 100, 0.08);
+    }
+
+    /* Full-width dropdown */
+    .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%; /* Extend to full width */
+        background-color: #fdfcf7;
+        border-top: 1px solid rgba(92, 138, 100, 0.15);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        padding: 0.75rem 0;
+        max-height: 70vh;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .nav-item {
+        margin: 0;
+        text-align: center; /* Center align menu items */
+    }
+
+    .nav-link {
+        color: #333;
+        padding: 1rem;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        transition: all 0.2s ease;
+        display: block;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(92, 138, 100, 0.08);
+        color: #2d4a30 !important;
+    }
+    /* Apply a class for the faded effect */
+
+
+}
+
+
+
+body {
+  background-color: #fdfcf7;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll from rotated elements */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    url("background_feather.png");
+  
+  background-repeat: repeat;
+  background-size: 300px;
+  background-position: 
+    0 0,
+    900px 450px,
+    1800px 900px;
+  opacity: 0.3;
+  transform: rotate(330deg); /* Adjust the degree as needed (e.g., 5deg-15deg) */
+  transform-origin: center center;
+  z-index: -1;
+  pointer-events: none; /* Ensures clicks pass through to content */
+}
+
+
+
+.hero-img {
+  margin-top: 50px;
+  padding-left: 70px;
+  /* Adjust as needed */
+}
+
+.button {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4CAF50;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #4CAF50 20%, transparent 30%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greenTopBubbles 0.6s ease;
+}
+
+@keyframes greenTopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenBottomBubbles 0.6s ease;
+}
+
+@keyframes greenBottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+        
+        /* Updated Filter Buttons to match .button style */
+.filter-buttons .btn {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4CAF50;
+  transition: all 0.2s ease;
+  margin: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.filter-buttons .btn-outline-primary {
+  background-color: transparent;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+.filter-buttons .btn.active {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+}
+
+.filter-buttons .btn:before,
+.filter-buttons .btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+.filter-buttons .btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #4CAF50 20%, transparent 30%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greenTopBubbles 0.6s ease;
+}
+
+.filter-buttons .btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #4CAF50 15%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%),
+    radial-gradient(circle, #4CAF50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenBottomBubbles 0.6s ease;
+}
+
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  background-color: #4CAF50;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+  border: none;
+}
+
+.filter-buttons .btn:active {
+  transform: scale(0.95);
+}
+
+
+
+.social-links a {
+    font-size: 28px; /* Slightly larger size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Slight hover effect */
+}
+
+/* Individual Social Media Colors */
+.twitter { color: #1DA1F2; }  /* Twitter (X) Blue */
+.linkedin { color: #0077B5; }  /* LinkedIn Blue */
+.instagram { color: #E1306C; }  /* Instagram Pink */
+.facebook { color: #1877F2; }  /* Facebook Blue */
+.youtube { color: #FF0000; }  /* YouTube Red */
+
+
+
+}
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0 20px;
+  }
+  
+  footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+
+
+/* Event Gallery Cards */
+.event-gallery .card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.event-gallery .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.event-gallery-slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.glide__slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.glide__arrow {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.glide__arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.event-date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-meta span {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+/* Filter Buttons */
+.filter-buttons .btn {
+  margin: 0 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .event-gallery-slider {
+    height: 250px;
+  }
+  
+  .glide__slide img {
+    height: 250px;
+  }
+}
+  </style>
+  
+  
+  
+  
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Writing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gal.html">Theatre Making</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    
+  <section id="home" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- From Uiverse.io by SteveBloX -->
+        
+        <div class="col-lg-6 hero-text">
+          <h1 class="display-3 fw-bold">Join me </h1>
+          <h2 class="display-6 mb-4">Acclaimed Writer & Theatre Maker</h2>
+          <p class="lead mb-4">Freelance writer specializing in scriptwriting for theatre and screen, theatre director and dramaturg.</p>
+          <a href="gallery.html" class="button">View My Work</a>
+          <a href="index.html#contact" class="button">Hire Me</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="nicole_portrait.jpg" alt="Writer Nicole Jones portrait image of producer in Bradford" class="img-fluid rounded-circle hero-img" style="max-width: 450px;">
+          
+        </div>
+      </div>
+      
+  </section>
+
+ 
+ 
+ <!-- Recent Production Section -->
+<section id="recent-production" class="py-5">
+    <div class="container">
+        
+
+        <div class="row justify-content-center align-items-center g-5">
+            <!-- Image Column -->
+            <div class="col-lg-6 col-md-12">
+                <div class="recent-prod-image-wrapper position-relative overflow-hidden rounded-4 shadow-lg">
+                    <img src="https://images.nationaltheatre.org.uk/uploads/2025/04/2024_YPP_S2C_group_Andreia_Leitao_900x900.jpg?resize=900%2C900&gravity" alt="Most recent theatre production - behind the scenes or stage shot" class="img-fluid w-100" style="object-fit: cover; height: 400px;">
+                    <div class="image-credit position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white small px-2 py-1 m-2 rounded">
+                        Production still | Credit: Photographer Name
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-lg-5 col-md-12">
+                <div class="recent-prod-content">
+                    <span class="badge bg-success mb-3 px-3 py-2 rounded-pill" style="background-color: #4CAF50 !important;">★ Most Recent</span>
+                    <h3 class="display-6 fw-bold mb-3">National Theatre Playwright Mentor</h3>
+                    <div class="production-meta mb-3 text-muted">
+                        <span class="me-3"><i class="far fa-calendar-alt me-1"></i> 2026</span>
+                        <span class="me-3"><i class="fas fa-theater-masks me-1"></i> National Theatre</span>
+                        
+                    </div>
+                    <p class="lead fs-5 mb-4">Nicole was a Playwright Mentor for the National Theatre’s New Views Playwriting programme for young people. She led writing workshops and offered dramaturgy support to young writers in Yorkshire and the North, and, in partnership with Leeds Playhouse’s community partner Getaway Girls, she was lead facilitator of the 8-week New Views Hub playwriting programme. She contributed to the long-listing process for the New Views Festival at the Olivier Theatre, working from final drafts submitted by her mentees (with 80 drafts received in the first round)".</p>
+                    
+                    
+                    <!-- Two-button row matching your .button style -->
+                    <div class="d-flex gap-3 flex-wrap">
+                        
+                        <a href="https://www.nationaltheatre.org.uk/learn-explore/young-people/new-views/ " target="_blank" class="button" style="background-color: transparent; color: #4CAF50; border: 2px solid #4CAF50;" onmouseover="this.style.backgroundColor='#4CAF50'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#4CAF50';">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+
+
+<section id="production" class="py-5">
+  <div class="container">
+    <div class="section-header text-left mb-5">
+      <h2 class="display-4">Overview</h2>
+      <div class="divider mx-auto"></div>
+    
+    </div>
+    
+    <div class="row justify-content-center">
+      <!-- First Column -->
+      <div class="col-md-6 text-left mb-4 mb-md-0">
+       
+        <p class="card-content">
+          As a Theatre-Maker Nicole's practice is based in a holistic and spiritual human-centred community care focused way. She has extensive experience in directing/dramaturgy, facilitation and producing, working with professionals and communities. Nicole directed several short plays for Graeae Theatre’s Crips With Chips new writing showcase presented with Theatre by The Lake and Liverpool Everyman Theatre on their mainstages (2023-24). She is currently a Dramaturg Mentor on Paines Plough's Tour The Writer programme in partnership with Bradford Producing Hub and Bradford 2025. She was a Creative Associate on the Royal Shakespeare Company’s First Encounters production of Romeo and Juliet and Twelfth Night, where she assisted rehearsals in Stratford-Upon-Avon and directed the young ensembles in schools and associate theatres in the northern region of the tour (2024). Nicole has been trained by the Almeida Theatre, as a JMK Trust Mentored Director, through the Regional Theatre Young Directors Scheme (2021) and worked as a script-reader for Sheffield Theatres (2022). 
+        </p>
+        <img src="books_illustration.png" alt="Production Logo, Acclaimed writer Nicole Joseph" class="img-fluid mb-4" style="max-height: 180px; display: block; margin: 0 auto;">
+
+      </div>
+      
+      
+      
+      <!-- Second Column (Duplicate) -->
+      <div class="col-md-6 text-center">
+       <div class="container">
+  <div class="section-header text-center mb-5">
+    <h2 class="display-4">Latest Production</h2>
+    <div class="divider mx-auto"></div>
+    <p class="lead">Paines Plough Tour The Writer Bradford Dramaturg & Mentor</p>
+  </div> 
+       
+        <img src="pplogo2017landscapemagenta (1).jpg" alt="Production Arts, images , writer , Paines Plough's Tour the Writer programme in Bradford" class="img-fluid mb-4" style="max-height: 120px;">
+        <p class="card-content">
+          Nicole is a Writer Mentor and Dramaturg on Paines Plough's Tour the Writer programme in Bradford in partnership with Bradford 2025 and Bradford Producing Hub.
+          She is mentoring the writers group and providing support in addition to dramaturgy to 5 writers from the group.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    
+
+    <!-- Events Gallery -->
+<!-- Events Gallery -->
+<section id="events" class="py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-light">Previous Events</h2>
+            <div class="divider mx-auto bg-gradient" style="height: 2px; width: 80px; background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(108,117,125,0.5) 50%, rgba(0,0,0,0) 100%);"></div>
+            <p class="text-muted mt-3">View some of the recent projects</p>
+        </div>
+
+        <div class="text-center">
+            <img src="theatre_mask.png" alt="Theatre mask comedy tradjedy illustration, play entertainment" class="img-fluid my-4" style="width: 120px; opacity: 0.8;">
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="row mb-5">
+  <div class="col-12">
+    <div class="filter-buttons text-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0.5rem;">
+      <button class="button" data-filter="all" style="font-size: 0.8rem; padding: 0.5rem 0.8rem; margin: 0.25rem;">All Events</button>
+      <button class="button" data-filter="workshop" style="font-size: 0.8rem; padding: 0.5rem 0.8rem; margin: 0.25rem;">Crips & Chips</button>
+      <button class="button" data-filter="exhibition" style="font-size: 0.8rem; padding: 0.5rem 0.8rem; margin: 0.25rem;">Crips & Chips</button>
+      <button class="button" data-filter="reading" style="font-size: 0.8rem; padding: 0.5rem 0.8rem; margin: 0.25rem;">Twelfth Night</button>
+      <button class="button" data-filter="signing" style="font-size: 0.8rem; padding: 0.5rem 0.8rem; margin: 0.25rem;">Brief Encounters</button>
+    </div>
+  </div>
+</div>
+
+        <!-- Event Gallery -->
+        <div class="row g-4 event-gallery">
+            <!-- Event 1: Theatre Show -->
+           
+            <!-- Event 2: Writing Workshop -->
+            <div class="col-lg-6 event-item workshop" data-date="2023-07-22">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectB3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Crips & Chips</span>
+                        <h3 class="card-title h5 mb-3">Graeae Theatre & Liverpool Everyman Theatre</h3>
+                        <p class="card-text text-secondary mb-4">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Liverpool Everyman Theatres.<br><br>
+
+                        <strong>Gather Your Party Before Venturing Forth</strong> by Bobby Brill, performed by Nadia Nadarajah, Faye Donnelan and interpreted by Chandu Gopalakrishnan. The play explored long-distance friendships in the gaming world and insecure housing and disabled experience.
+                        <br><br>
+                        <strong>JANUS</strong> by Madeleine Farnhill, performed by Nadia Nadarajah, Mark Lockyer and Chandu Gopalakrishnan. A folk-horror exploring rural isolation, brutality and abuse through the appearance of a two-headed lamb.</p>
+                        <div class="event-actions">
+                            <a href="https://graeae.org/project/crips-with-chips/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3: Exhibition -->
+            <div class="col-lg-6 event-item exhibition" data-date="2023-08-05">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectA3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Exhibition hall, thetare, arts, drama">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Drama, play, theatre nicole joseph">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Actors , evening enteratinment">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectB2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="Show, event play write , drama , nicole joseph">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Graeae Theatre</span>
+                        <h3 class="card-title h5 mb-3">Graeae Theatre & Theatre by the Lake 2023</h3>
+                        <p class="card-text text-secondary mb-4">Nicole directed 2 new short plays as part of Graeae Theatres Crips With Chips New Writing showcase at Theatre by the Lake. <br><br>
+
+                        <strong> Let Me Fat in Peace </strong>by Caitlin Magnall-Kearns, performed by Beca Barton and Siobhan Athwal. This comedy explored fat-phobia and perceived desirability in mixed-weight relationships.<br><br>
+
+                        <strong>Ajar</strong> by Nell Hardy, performed by Beca Barton, Mariah Loca, Kellan Frankland and Charlie Folorunsho. The drama explored transphobia in women's refuges and unsafety in police handling.</p>
+                        <div class="event-actions">
+                            <a href="https://graeae.org/project/crips-with-chips/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 event-item reading" data-date="2023-06-15">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="ProjectC4.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA1.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectA2.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="336738_First Encounters_ Twelfth Night_ 2022_2022_Web use (2) (1).jpg" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Twelfth Night</span>
+                        <h3 class="card-title h5 mb-3">Royal Shakespeare Company, 2022</h3>
+                        <p class="card-text text-secondary mb-4">Nicole worked as part of a team of Creative Associates employed by the RSC. She supported the large-scale tour of Shakespeare's Twelfth Night for young audiences to Associate School groups and Theatre Partners across Yorkshire: Bradford Alhambra, York Theatre Royal and Hull Truck Theatre</p>
+                        <div class="event-actions">
+                            <a href="https://www.rsc.org.uk/first-encounters-twelfth-night/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4: Book Signing -->
+            <div class="col-lg-6 event-item signing" data-date="2023-10-12">
+                <div class="card h-100 border-0 overflow-hidden" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="glide event-gallery-slider">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="Brief_encounter.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;" alt="matanee performance , show , theatre , play">
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="ProjectC3.png" class="img-fluid w-100" style="height: 300px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir="<">
+                                <i class="fas fa-chevron-left" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <button class="glide__arrow glide__arrow--right btn btn-sm rounded-circle text-white" 
+                                style="width: 28px; height: 28px; line-height: 1; background-color: rgba(0, 0, 0, 0.5);" 
+                                data-glide-dir=">">
+                                <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <span class="badge fs-6 px-2 py-1 mb-3" style="background-color: #4CAF50; color: white;">Brief Encounters</span>
+                        <h3 class="card-title h5 mb-3">Stephen Joseph Theatre (2022) </h3>
+                        <p class="card-text text-secondary mb-4">Nicole assisted the director on Emma Rice’s adaptation of the classic film, Brief Encounter in the round at the Stephen Joseph Theatre working with their Artistic Director. She provided contextual research, ideas and supported and observed the production across movement direction, musical direction and overall directorial vision.</p>
+                        <div class="event-actions">
+                            <a href="https://musicaltheatrereview.com/brief-encounter-stephen-joseph-theatre-scarborough/" target="_blank" class="button" style="font-size: 0.9rem; padding: 0.6rem 1rem;">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      
+  
+
+
+
+
+<!-- Medium-Sized Image -->
+<img src="book_pen_illustration.png" alt="Description of Image" style="max-width: 50%; height: auto; display: block; margin: 10px auto;">
+
+<br><br>
+
+ <section id="thanks" class="py-5 bg-light">
+   <div class="container">
+     <div class="section-header text-center mb-4">
+       <h2 class="display-4">Image Credits</h2>
+       <div class="divider mx-auto"></div>
+       <p class="lead">Acknowledging the amazing people who make this possible.</p>
+     </div>
+     
+     <div class="text-center">
+  <details class="mx-auto p-2 bg-white border border-success rounded-3 shadow-sm" style="max-width: 500px; cursor: pointer;">
+    <summary class="h6 fw-bold text-success">View Credits</summary>
+    <div class="mt-2 text-success fs-6" style="text-align: center;">
+      <p class="mb-2"><strong>Graeae – TBC:</strong> Photo by Joe Bailey © RSC.</p>
+      <p class="mb-2"><strong>Brief Encounter - Stills:</strong> Tony Bartholomew </p>
+    </div>
+  </details>
+</div>
+
+       </details>
+     </div>
+   </div>
+ </section>
+
+</div>
+
+<br><br>
+<div class="image-divider"></div>
+
+<style>
+.image-divider {
+    background-image: url('ink_pot_illustration.png');
+    background-repeat: repeat-x;
+    background-size: contain; /* Ensures full visibility */
+    height: 100px; /* Adjust as needed */
+    width: 100%;
+}
+</style>
+
+
+
+
+        <section>
+  <div class="row mt-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="newsletter-cta p-4 p-md-5 text-center rounded shadow">
+        <h3 class="mb-3">Stay Updated</h3>
+        <p class="mb-4">Subscribe to get announcements for new events and appearances</p>
+
+        
+        <form id="emailSubmissionForm" class="row g-2 justify-content-center">
+          <div class="col-md-8">
+           
+            <input type="email" name="email" class="form-control" placeholder="Your email address" required>
+          </div>
+          <div class="col-md-4">
+            <p style="font-size: 0.8em;">
+              By subscribing you agree to the privacy policy. You can unsubscribe at any time
+            </p>
+            <button type="submit" class="btn w-100" style="background-color: #4CAF50; border-color: #4CAF50; color: white;">
+              Subscribe
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+  
+     <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+  <div class="container-fluid px-5"> <!-- Add px-5 for horizontal padding -->
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; 2025 Nicole Joseph. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <a href="privacy.html" class="text-white me-3">Privacy Policy</a>
+        <a href="privacy.html" class="text-white">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+   
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const emailForm = document.getElementById('emailSubmissionForm'); // Changed form ID
+  
+  if (emailForm) {
+    emailForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      
+      try {
+        // UI feedback while processing
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Get email value and auto-populate other fields
+        const userEmail = this.elements.email.value.trim();
+        
+        // Auto-populated data structure
+        const formData = {
+          name: "Email Submission", // Static value
+          email: userEmail,         // User input
+          phone: "00000000000",     // Static value
+          message: "New email submission" // Static value
+        };
+        
+        // Validation (email only)
+        if (!userEmail) throw new Error('Please enter your email');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
+          throw new Error('Please enter a valid email address');
+        }
+        
+        // Same Lambda endpoint
+        const LAMBDA_ENDPOINT = 'https://bvdlcitsk7.execute-api.eu-west-2.amazonaws.com/Dev/submissions';
+        
+        const response = await fetch(LAMBDA_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.message || 'Server error. Please try again later.');
+        }
+        
+        // Success handling
+        showAlert('Thank you for subscribing!', 'success'); // Modified message
+        this.reset();
+        
+      } catch (error) {
+        console.error('Submission error:', error);
+        showAlert(error.message || 'Failed to send. Please try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    });
+  }
+  
+  // Alert function (same as original)
+  function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `form-alert alert alert-${type === 'error' ? 'danger' : 'success'}`;
+    alertDiv.textContent = message;
+    
+    // Styling (matches original)
+    alertDiv.style.position = 'fixed';
+    alertDiv.style.top = '20px';
+    alertDiv.style.right = '20px';
+    alertDiv.style.zIndex = '1000';
+    alertDiv.style.padding = '15px';
+    alertDiv.style.borderRadius = '5px';
+    alertDiv.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    alertDiv.style.animation = 'fadeIn 0.3s ease-in-out';
+    
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+      alertDiv.style.animation = 'fadeOut 0.3s ease-in-out';
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 5000);
+  }
+});
+
+// Add the same animation CSS as original
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(style);
+</script>
+   
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Glide.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Events JS -->
+    <script src="events.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Glide sliders for each event
+  document.querySelectorAll('.event-gallery-slider').forEach(slider => {
+    new Glide(slider, {
+      type: 'carousel',
+      perView: 1,
+      autoplay: 3000,
+      hoverpause: true,
+      animationDuration: 800
+    }).mount();
+  });
+  
+  // Filter events
+  const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+  const eventItems = document.querySelectorAll('.event-item');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      // Filter events
+      eventItems.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+  // Animate cards on scroll
+  const animateOnScroll = function() {
+    const events = document.querySelectorAll('.event-item');
+    
+    events.forEach(event => {
+      const eventPosition = event.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (eventPosition < windowHeight - 100) {
+        event.classList.add('animate__animated', 'animate__fadeInUp');
+      }
+    });
+  };
+  
+  // Initial check
+  animateOnScroll();
+  
+  // Check on scroll
+  window.addEventListener('scroll', animateOnScroll);
+});
+      
+      
+    </script>
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let navbar = document.getElementById("navbar");
+    
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 50) { // Adjust scroll threshold as needed
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+
+</html>
